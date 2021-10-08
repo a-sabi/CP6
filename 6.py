@@ -1,4 +1,12 @@
-delta = int(input("Введите delta:"))
+while True:
+    try:
+        delta = int(input("Введите delta:"))
+        if delta < 0:
+            raise Exeption()
+    except:
+        print("Введена неправильная delta")
+        continue
+    break
 array = list(map(int, input("Введите элементы массива:").split()))
 m = array[0]
 count = 0
